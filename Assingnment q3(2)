@@ -1,0 +1,17 @@
+public class SwapWithoutThirdVariable {
+    public static void main(String[] args) {
+        // Assign values to variables 'a' and 'b'
+        int a = 4;
+        int b = 9;
+
+        // Without using a third variable to swap values
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        // Print the swapped values
+        System.out.println("After swapping (without third variable):");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
