@@ -1,0 +1,17 @@
+public class SwapWithThirdVariable {
+    public static void main(String[] args) {
+        // Assign values to variables 'a' and 'b'
+        int a = 4;
+        int b = 9;
+
+        // Using a third variable to swap values
+        int temp = a;
+        a = b;
+        b = temp;
+
+        // Print the swapped values
+        System.out.println("After swapping (with third variable):");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
