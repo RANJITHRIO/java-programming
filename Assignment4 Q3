@@ -1,0 +1,45 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetOperations {
+
+    // Method to find the intersection of two sets
+    public static <T> Set<T> intersection(Set<T> set1, Set<T> set2) {
+        Set<T> result = new HashSet<>(set1);
+        result.retainAll(set2);
+        return result;
+    }
+
+    // Method to find the union of two sets
+    public static <T> Set<T> union(Set<T> set1, Set<T> set2) {
+        Set<T> result = new HashSet<>(set1);
+        result.addAll(set2);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Creating two sets
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+
+        // Adding elements to set1
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+        set1.add(4);
+
+        // Adding elements to set2
+        set2.add(3);
+        set2.add(4);
+        set2.add(5);
+        set2.add(6);
+
+        // Finding and printing the intersection of sets
+        Set<Integer> intersectionResult = intersection(set1, set2);
+        System.out.println("Intersection: " + intersectionResult);
+
+        // Finding and printing the union of sets
+        Set<Integer> unionResult = union(set1, set2);
+        System.out.println("Union: " + unionResult);
+    }
+}
