@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input a 3-digit number
+        System.out.print("Enter a 3-digit number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is a 3-digit number
+        if (number >= 100 && number <= 999) {
+            // Reverse the digits
+            int reversedNumber = reverseDigits(number);
+
+            // Print the reversed number
+            System.out.println("Reversed number: " + reversedNumber);
+        } else {
+            System.out.println("Please enter a valid 3-digit number.");
+        }
+
+        scanner.close();
+    }
+
+    // Function to reverse the digits of a number
+    private static int reverseDigits(int num) {
+        int reversed = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        return reversed;
+    }
+}
